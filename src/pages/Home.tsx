@@ -12,7 +12,7 @@ const Profile: React.FC = () => {
             <li><a href="/wallets">export wallets</a></li>
             <li><a href="/wallets">import wallets</a></li>
             <li><a href="/wallets">send transactions</a></li>
-            <li><a>interact with smart contracts</a></li>
+            <li>interact with smart contracts</li>
           </ul>
         </div>
       </div>

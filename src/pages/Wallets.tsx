@@ -157,14 +157,14 @@ const App: React.FC = () => {
             <div className="fw-bold">Wallet #{wallet.index}</div>
             <div>
               <div>{wallet.address}</div>
-              <div>{balances[index] ? (balances[index].finalBalance != balances[index].candidateBalance ? balances[index].candidateBalance + " MAS (candidate)" : balances[index].finalBalance + " MAS") : '⟳'} | <a href="#" onClick={() => {setExportWallet(false); initTransaction(index)}}>Send</a> - <a href="#" onClick={() => removeWallet(index)}>Remove</a> - <a href="#" onClick={() => {setTransaction(false); initExportWallet(index)}}>Export</a></div>
-              {transaction && transaction.address == wallet.address ? (
+              <div>{balances[index] ? (balances[index].finalBalance !== balances[index].candidateBalance ? balances[index].candidateBalance + " MAS (candidate)" : balances[index].finalBalance + " MAS") : '⟳'} | <button className="btn btn-link" onClick={() => {setExportWallet(false); initTransaction(index)}}>Send</button> - <button className="btn btn-link" onClick={() => removeWallet(index)}>Remove</button> - <button className="btn btn-link" onClick={() => {setTransaction(false); initExportWallet(index)}}>Export</button></div>
+              {transaction && transaction.address === wallet.address ? (
                 transaction.opId ? (
                   <div>Operation: {transaction.opId}</div>
                 ):(
                   <div className="card mt-2">
                     <div className="card-header fw-bold">
-                      Send transaction <span className="fst-italic">(<a href="#" onClick={() => {setTransaction(false)}}>hide</a>)</span>
+                      Send transaction <span className="fst-italic">(<button className="btn btn-link" onClick={() => {setTransaction(false)}}>hide</button>)</span>
                     </div>
                     <div className="card-body">
                       <div className="input-group mb-2">
@@ -187,10 +187,10 @@ const App: React.FC = () => {
                   </div>
                 ))
               : "" }
-              {exportWallet && exportWallet.address == wallet.address ? (
+              {exportWallet && exportWallet.address === wallet.address ? (
                 <div className="card mt-2">
                   <div className="card-header fw-bold">
-                    Export wallet <span className="fst-italic">(<a href="#" onClick={() => {setExportWallet(false)}}>hide</a>)</span>
+                    Export wallet <span className="fst-italic">(<button className="btn btn-link" onClick={() => {setExportWallet(false)}}>hide</button>)</span>
                   </div>
                   <div className="card-body">
                     <textarea className="form-control" rows={3} spellCheck="false" defaultValue={`Address: ${exportWallet.address}\nPublic key: ${exportWallet.publicKey}\nSecret key: ${exportWallet.secretKey}`} />
@@ -210,7 +210,7 @@ const App: React.FC = () => {
           (
             <div className="card mt-2">
               <div className="card-header fw-bold">
-                Import wallet <span className="fst-italic">(<a href="#" onClick={() => {setImportWallet(false)}}>hide</a>)</span>
+                Import wallet <span className="fst-italic">(<button className="btn btn-link" onClick={() => {setImportWallet(false)}}>hide</button>)</span>
               </div>
               <div className="card-body">
                 <div className="input-group mb-2">
