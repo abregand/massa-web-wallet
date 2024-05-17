@@ -8,6 +8,7 @@ import Wallets from './pages/Wallets';
 const App: React.FC = () => {
   return (
     <div>
+      <div className="bg-danger p-1 text-center">Network: BuildNet</div>
       <nav className="navbar navbar-expand-lg">
         <div className="container">
           <a className="navbar-brand" href="/">Massa Web Wallet</a>
