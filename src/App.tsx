@@ -1,5 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import Home from './pages/Home';
 import Wallets from './pages/Wallets';
 
@@ -13,12 +15,12 @@ const App: React.FC = () => {
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarNav">
-            <ul className="navbar-nav">
-              <li className="nav-item">
-                <a href="/">Home</a>
+            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+              <li className="nav-item ms-2">
+                <a href="/" className="nav-link">Home</a>
               </li>
               <li className="nav-item ms-2">
-                <a href="/wallets">Wallets</a>
+                <a href="/wallets" className="nav-link">Wallets</a>
               </li>
             </ul>
           </div>
@@ -36,7 +38,8 @@ const App: React.FC = () => {
 
       <footer className="footer">
         <div className="container">
-          <span>© Copyright 2024 | <a href="https://web-wallet.massa.ga/">Massa Web Wallet</a></span>
+          <div><span>© Copyright 2024 | <a href="https://web-wallet.massa.ga/">Massa Web Wallet</a></span></div>
+          <div className="small">♥ Donate <code>AU1L3YbT7SBwxdVwzacoonEgou5oXi5mNfXMaXqYhoL69GVrDUrE</code></div>
         </div>
       </footer>
     </div>

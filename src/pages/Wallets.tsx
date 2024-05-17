@@ -1,5 +1,4 @@
 import React, { useEffect, useState, useRef } from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import '../App.css';
 import {
   ClientFactory,
@@ -203,10 +202,10 @@ const App: React.FC = () => {
         ))}
       </div>
 
-      <div className="mt-3">
-        <button className="btn btn-sm btn-danger" onClick={refreshBalance}>Refresh balances</button>
-        <button className="btn btn-sm btn-danger ms-2" onClick={createWallet}>Create new wallet</button>
-        <button className="btn btn-sm btn-danger ms-2" onClick={() => setImportWallet(true)}>Import wallet</button>
+      <div className="mt-2">
+        <button className="btn btn-sm btn-danger me-2 mt-1" onClick={createWallet}>Create new wallet</button>
+        <button className="btn btn-sm btn-danger me-2 mt-1" onClick={() => setImportWallet(true)}>Import wallet</button>
+        <button className="btn btn-sm btn-danger mt-1" onClick={refreshBalance}>Refresh balances</button>
         {importWallet ?
           (
             <div className="card mt-2">
