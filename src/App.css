@@ -1,0 +1,36 @@
+body {
+  background-color: rgb(216, 187, 187);
+}
+
+footer {
+  margin-top: 50px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+a {
+  color: rgb(177, 44, 44);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.wallet {
+  border-left: 7px solid rgb(212, 175, 175);
+  padding-left: 5px;
+}
+
+.card {
+  background-color: rgb(212, 175, 175);
+}
+
+.form-control, .input-group-text {
+  background-color: rgb(214, 196, 196) !important;
+  border-color: rgb(216, 187, 187);
+}
+
+.form-control:hover, .form-control:focus  {
+  background-color:  rgb(216, 187, 187) !important;
+}
